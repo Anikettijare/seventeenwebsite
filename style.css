@@ -9,11 +9,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 50px;
+    padding: 20px;
     font-weight: 800;
-    position: absolute;
+    position: fixed;
     right: 0;
     left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.80);
 }
 .logo a{
     text-decoration: none;
@@ -531,11 +533,24 @@
 }
 /* Media queries for tablet devices */
 @media (max-width:900px) {
+    
     .mobile_menu{
         display: block;
     }
-    .navbar ul{
-        display: none;
+    .navbar ul {
+        width: 100vw;
+        position: fixed;
+        top: -380px;
+        text-align: center;
+        left: 0px;
+        background:  rgba(0, 0, 0, 0.80);
+        display: block;
+        transition: 0.5s;
+        z-index: 10;
+        padding: 30px;
+    }
+    .navbar ul li{
+        display: block;
     }
     .main_content{
         display: block;

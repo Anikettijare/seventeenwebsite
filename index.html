@@ -12,7 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <title>E-book Website</title>
 </head>
-
+<script>
+    let menu = document.getElementById('navmenu');
+    function openMenu(){
+        navmenu.style.top= '0px';
+    }
+    function closeMenu(){
+        navmenu.style.top= '-380px';
+    }
+</script>
 <body>
     <div class="container">
         <!-- Header ssection And Navigation bar -->
@@ -24,21 +32,21 @@
                         <span>ebook</span>
                     </a>
                 </div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">The Book</a></li>
-                    <li><a href="#">Author</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="navmenu" onclick="closeMenu()">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#book">The Book</a></li>
+                    <li><a href="#author">Author</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contacts">Contact</a></li>
                     <button>Download</button>
                 </ul>
-                <div class="mobile_menu">
+                <div class="mobile_menu" onclick="openMenu()">
                     <i class="fa fa-bars"></i>
                 </div>
             </nav>
         </header>
         <!-- Information about Main Content -->
-        <section class="info_content">
+        <section class="info_content" id="home">
             <div class="main_content">
                 <div class="right_content">
                     <h6>Introducing ebook</h6>
@@ -75,7 +83,7 @@
         </section>
         <!-- Info About Book Section -->
         <section class="book_section">
-            <div class="books">
+            <div class="books" id="book">
                 <div class="online_pdfimg">
                     <img src="images/tablet-screen-contents.jpg" width="100%">
                 </div>
@@ -228,7 +236,7 @@
             </div>
         </section>
         <!-- Author Section -->
-        <section class="author_section">
+        <section class="author_section" id="author">
             <div class="author_content">
                 <div class="aut_img">
                     <img src="images/portrait-mature-smiling-authoress-sitting-desk.jpg" alt="Author sitting-desk">
@@ -248,7 +256,7 @@
             </div>
         </section>
         <!-- Reviews Section -->
-        <section>
+        <section id="reviews">
             <div class="review_section">
                 <div class="review_head">
                     <h4>Reviews</h4>
@@ -322,7 +330,7 @@
             </div>
         </section>
         <!-- Footer Section -->
-        <footer>
+        <footer id="contacts">
             <div class="footer_section">
                 <div class="contact_section">
                     <div class="get_ebook">
