@@ -20,12 +20,22 @@
     function closeMenu(){
         navmenu.style.top= '-380px';
     }
+    document.addEventListener('scroll', () => {
+        let main = document.querySelector('.navbar');
+
+        if(window.scrollY > 0){
+           main.classList.add('scrolled');
+        }else{
+            main.classList.remove('scrolled');   
+        }
+    });       
+    
 </script>
 <body>
     <div class="container">
         <!-- Header ssection And Navigation bar -->
         <header>
-            <nav class="navbar">
+            <nav class="navbar scrolled">
                 <div class="logo">
                     <a href="#">
                         <i class="fa fa-book-open"></i>
